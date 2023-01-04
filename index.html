@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- add image -->
+    <link rel="icon" href="./tet.png" type="image/x-icon">
+    <title>Tetris</title>
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="box1">
+
+            <div class="title">
+                <h1>Tetris</h1>
+            </div>
+
+            <div class="score">
+                <span>Score</span>
+                <div id="score">0</div>
+            </div>            
+
+            <div class="controls">
+                <button id="start">Start</button>
+                <button id="pause" class="hide">Pause</button>
+            </div>       
+
+            <div class="mini-grid">
+
+            </div>   
+            
+            <div class="instructions">
+                <p class="ins-head">Instructions<p>
+                <p>* Use the arrow keys to move the tetrominoes.</p>
+                <p>* Press the up arrow key to rotate the tetrominoes.</p>
+                <p>* Press the down arrow key to speed up the tetrominoes.</p>
+
+            </div>
+        </div>
+        <div class="box2">
+            <div class="grid">
+            </div>   
+            <div class="keycodes hide">
+                <div class="left"> &lArr; </div>
+                <div class="down"> &dArr; </div>
+                <div class="rotate"> &uArr; </div>
+                <div class="right"> &rArr; </div>            
+            </div>         
+        </div>
+
+    </div>
+
+    <!-- floating window for end screen and restart -->
+    <div class="end-screen hide">
+        <div class="end-screen-content">
+            <h1>Game Over</h1>
+            <p>Your final score is <span id="final-score"></span></p>
+            <button id="restart">Restart</button>
+        </div>
+    </div>
+
+    <div class="made-by">
+        <p>Made with <span style="color: red;font-size: larger;">&hearts;</span> by <a href="https://mnk17arts.github.io" target="_blank"> @mnk17arts </a></p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

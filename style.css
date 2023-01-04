@@ -1,0 +1,224 @@
+body {
+    background-color: rgb(255, 224, 198);
+    font-family: 'Courier New', Courier, monospace ,cursive, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.title {
+    font-size: 20px;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#score {
+    font-size: 30px;
+}
+
+.controls > button {
+    margin: 10px;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    visibility: 0.8;
+    border: inset 3px rgb(254, 116, 116);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    cursor: pointer;
+    background-color: rgb(253, 139, 139);
+
+}
+
+.controls > button:hover {
+    border: outset 3px rgb(254, 116, 116);
+    text-shadow: -1px -1px 1px rgb(0, 0, 0);    transition: 0.2s;
+}
+
+.controls > button:active {
+    border: 3px solid rgb(254, 116, 116);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    transition: 0.2s;
+}
+
+
+.grid {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    width: 200px;
+    height: 400px;
+    border: 2px solid rgba(0, 0, 0, 0.591);
+}
+
+.grid > div {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(0, 0, 0, 0.148);
+}
+
+.tet {
+    background-color: rgba(0, 0, 0, 0.765);
+    border: outset 2px rgb(57, 57, 57) !important;
+
+}
+
+.grid > div.taken {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: #0000;
+}
+
+.grid > div.taken.tet {
+    background-color: rgba(0, 0, 0, 0.765);
+    border: outset 2px rgb(57, 57, 57);
+}
+
+.mini-grid {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 80px;
+    height: 80px;
+    /* border: 1px solid rgba(0, 0, 0, 0.591); */
+    /* background-color: rgba(0, 0, 0, 0.475); */
+}
+
+.mini-grid > div {
+    width: 16px;
+    height: 16px;
+    /* border: 1px solid rgba(0, 0, 0, 0.148); */
+}
+
+.mini-grid > div.tet {
+    border: outset 2px rgb(57, 57, 57);
+}
+
+.hide {
+    display: none; 
+    visibility: hidden;
+    transform: scale(0);
+}
+
+.container {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.end-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.97);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: #fff;
+}
+
+.end-screen-content > h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+#restart {
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    visibility: 0.8;
+    border: inset 3px rgb(144, 250, 106);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    cursor: pointer;
+    background-color: rgb(76, 172, 28);
+}
+
+#restart:hover {
+    border: outset 3px rgb(144, 250, 106);
+    text-shadow: -1px -1px 1px rgb(0, 0, 0);    transition: 0.2s;
+}
+
+#restart:active {
+    border: 3px solid rgb(144, 250, 106);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    transition: 0.2s;
+}
+
+.keycodes {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.keycodes > div {
+    width: 30px;
+    height: 30px;
+    /* border-radius: 3px; */
+    border: 3px inset rgb(64, 64, 64);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    background-color: #333;
+    cursor: pointer;
+}
+
+.keycodes > div:hover {
+    border: 3px outset rgb(64, 64, 64);
+    transition: 0.2s;
+}
+
+.keycodes > div:active {
+    border: 3px solid rgb(64, 64, 64);
+    transition: 0.2s;
+}
+
+.instructions{
+    margin-top: 5px;
+    font-size: 8px;
+    max-width: 150px;
+    text-align: left;
+    font-family: cursive, Arial, Helvetica, sans-serif;
+
+}
+
+.instructions > p.ins-head {
+    font-weight: bolder;
+}
+
+.made-by {
+    font-size: 0.7em;
+    margin: 0;
+    padding: 0;
+}
+
+.made-by > p > a {
+    color: rgb(39, 33, 28);
+    text-decoration: none;
+}
+
+.made-by > p > a:hover {
+    color: rgb(253, 4, 4);
+    text-decoration: underline;
+    transition: .3s ;
+}
